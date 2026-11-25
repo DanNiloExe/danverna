@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100B08">
+
+    <meta
+        name="description"
+        content="Danverna: encontre pessoas, descubra jogos de tabuleiro e participe de encontros."
+    >
+
+    <title>DANVERNA | Jogos e Encontros</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <a href="/" class="logo" aria-label="Página inicial da Danverna">
+            <img
+                src="/images/logo-danverna.png"
+                alt="DANVERNA"
+                style="width: 150px; height: 65px; object-fit: contain;"
+            >
+        </a>
+
+        <nav class="navigation">
+            <a href="#inicio">Início</a>
+            <a href="#eventos">Eventos</a>
+            <a href="/jogos.html">Catálogo de jogos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <div class="header-actions" id="header-actions">
+            <a href="/login.html" class="btn-login">Entrar</a>
+            <a href="/cadastro.html" class="btn-primary">Criar conta</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Apresentação -->
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">DANVERNA · JOGOS E ENCONTROS</span>
+
+                <h1>
+                    Grandes aventuras<br>
+                    começam ao redor<br>
+                    de uma mesa.
+                </h1>
+
+                <p>
+                    Reúna seus companheiros, embarque em novas partidas
+                    e descubra o universo dos jogos de tabuleiro.
+                    Cartas, dados e boas histórias esperam por você.
+                </p>
+
+                <a href="#eventos" class="btn-primary hero-button">
+                    Explorar eventos <span>→</span>
+                </a>
+            </div>
+
+            <!-- Elementos decorativos -->
+            <div class="hero-art">
+                <div class="hero-plaque">
+                    <div class="plaque-inner">
+                        <div class="plaque-name">DANVERNA</div>
+                        <div class="plaque-divider"></div>
+                        <span class="plaque-subtitle">
+                            JOGOS · RISADAS · BARRACO
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hero-card hero-card-one">
+                    <div class="card-border"></div>
+                    <div class="card-pattern"></div>
+                </div>
+
+                <div class="hero-card hero-card-two">
+                    <div class="card-border"></div>
+                    <div class="card-pattern"></div>
+                </div>
+
+                <div class="hero-token hero-token-one"></div>
+                <div class="hero-token hero-token-two"></div>
+
+                <!-- Dado comum -->
+                <div class="hero-die">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- Dado de vinte lados -->
+                <div class="hero-d20">
+                    <div class="d20-inner">20</div>
+                </div>
+
+                <!-- Meeples -->
+                <div class="hero-meeple hero-meeple-one">
+                    <span></span>
+                </div>
+
+                <div class="hero-meeple hero-meeple-two">
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos -->
+        <section class="events-section" id="eventos">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">
+                        SUA PRÓXIMA PARTIDA COMEÇA AQUI
+                    </span>
+
+                    <h2>Eventos disponíveis</h2>
+
+                    <p>
+                        Confira os próximos encontros e encontre sua
+                        próxima mesa de jogo.
+                    </p>
+                </div>
+
+                <span class="event-counter" id="event-counter">
+                    Carregando...
+                </span>
+            </div>
+
+            <div id="events-container" class="events-grid">
+                <div class="loading-message">
+                    Preparando os próximos encontros...
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section class="about-section" id="sobre">
+            <span class="eyebrow">DANVERNA</span>
+
+            <h2>Uma mesa, muitas histórias.</h2>
+
+            <p>
+                A Danverna nasceu da vontade de reunir pessoas em torno
+                de uma mesa e transformar encontros em boas histórias.
+                Mais do que organizar partidas, queremos criar um espaço
+                onde jogadores possam compartilhar experiências, conhecer
+                novos jogos, fortalecer amizades, dar muitas risadas e
+                descobrir novas aventuras a cada encontro.
+
+                Seja você um veterano dos tabuleiros ou alguém dando os
+                primeiros passos nesse universo, sempre haverá lugar para
+                mais um aventureiro à mesa.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <a href="/" class="logo" aria-label="Página inicial da Danverna">
+            <img
+                src="/images/logo-danverna.png"
+                alt="DANVERNA"
+                style="width: 130px; height: 55px; object-fit: contain;"
+            >
+        </a>
+
+        <p>
+            Danverna — um espaço para quem gosta de jogar e compartilhar histórias.
+        </p>
+
+        <span>© 2026 Danverna</span>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

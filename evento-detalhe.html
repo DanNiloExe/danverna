@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalhes do evento | A Taverna</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="/" class="logo">
+            <span class="logo-icon">⚔</span>
+            <span>A TAVERNA</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="/">Início</a>
+            <a href="/#events-section">Eventos</a>
+            <a href="/jogos.html">Catálogo de jogos</a>
+        </nav>
+
+        <div class="header-actions" id="header-actions"></div>
+    </header>
+
+    <main class="event-detail-page">
+
+        <a href="/#events-section" class="back-link">
+            <span>←</span> Voltar para os eventos
+        </a>
+
+        <div id="event-detail-container">
+            <div class="loading-message">
+                Carregando os detalhes da aventura...
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 A Taverna. Todos os direitos reservados.</p>
+        <span>Que os dados estejam a seu favor.</span>
+    </footer>
+
+    <script type="module" src="/src/evento-detalhe.js"></script>
+
+</body>
+</html>

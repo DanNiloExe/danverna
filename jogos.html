@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100B08">
+    <meta name="description" content="Conheça o catálogo de jogos de tabuleiro da Danverna Lúdica e descubra sua próxima aventura.">
+
+    <title>Catálogo de jogos | DANVERNA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <a href="/" class="logo" aria-label="DANVERNA - Página inicial">
+            <img
+                src="/images/logo-danverna.png"
+                alt="DANVERNA"
+                style="width: 150px; height: 65px; object-fit: contain;"
+            >
+        </a>
+
+        <nav class="navigation">
+            <a href="/#inicio">Início</a>
+            <a href="/#eventos">Eventos</a>
+            <a href="/jogos.html">Catálogo de jogos</a>
+            <a href="/#sobre">Sobre</a>
+        </nav>
+
+        <div class="header-actions" id="header-actions">
+            <a href="/login.html" class="btn-login">Entrar</a>
+            <a href="/cadastro.html" class="btn-primary">Criar conta</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="games-page">
+
+        <section class="games-intro">
+            <span class="eyebrow">DANVERNA · ACERVO</span>
+
+            <h1>Catálogo de jogos</h1>
+
+            <p>
+                Conheça os jogos disponíveis e encontre sua próxima aventura.
+            </p>
+        </section>
+
+        <!-- Pesquisa e filtros -->
+        <section class="catalog-controls">
+
+            <input
+                type="search"
+                id="search-game"
+                placeholder="Pesquisar jogo pelo título..."
+                aria-label="Pesquisar jogo pelo título"
+            >
+
+            <select id="filter-genre" aria-label="Filtrar por gênero">
+                <option value="">Todos os gêneros</option>
+            </select>
+
+        </section>
+
+        <!-- Lista de jogos -->
+        <section
+            id="games-list"
+            class="catalog-grid"
+            aria-live="polite"
+        >
+            <p>Carregando catálogo...</p>
+        </section>
+
+        <!-- Cadastro de jogos -->
+        <section
+            id="register-game-section"
+            class="register-game-section"
+            hidden
+        >
+
+            <h2>Cadastrar novo jogo</h2>
+
+            <p>Compartilhe um jogo com os demais aventureiros.</p>
+
+            <form id="register-game-form">
+
+                <div class="form-group">
+                    <label for="game-title">Título</label>
+                    <input
+                        type="text"
+                        id="game-title"
+                        maxlength="60"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="game-genre">Gênero</label>
+                    <input
+                        type="text"
+                        id="game-genre"
+                        maxlength="30"
+                    >
+                </div>
+
+                <div class="catalog-form-grid">
+
+                    <div class="form-group">
+                        <label for="game-min">Mínimo de jogadores</label>
+                        <input
+                            type="number"
+                            id="game-min"
+                            min="1"
+                            value="2"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game-max">Máximo de jogadores</label>
+                        <input
+                            type="number"
+                            id="game-max"
+                            min="1"
+                            value="4"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game-duration">Duração (minutos)</label>
+                        <input
+                            type="number"
+                            id="game-duration"
+                            min="1"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game-difficulty">Dificuldade</label>
+                        <select id="game-difficulty">
+                            <option value="">Selecione</option>
+                            <option value="Fácil">Fácil</option>
+                            <option value="Média">Média</option>
+                            <option value="Difícil">Difícil</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="game-image">URL da imagem</label>
+
+                        <input
+                            type="url"
+                            id="game-image"
+                            placeholder="https://exemplo.com/imagem-do-jogo.jpg"
+                        >
+
+                        <small>
+                            Insira o endereço de uma imagem do jogo.
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="game-form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                        id="game-submit"
+                    >
+                        Cadastrar jogo
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-login"
+                        id="cancel-edit"
+                        hidden
+                    >
+                        Cancelar edição
+                    </button>
+
+                </div>
+
+                <p id="game-message" role="status"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Aviso para visitantes -->
+        <section id="login-notice" hidden>
+            <p>
+                Entre na sua conta para cadastrar novos jogos no catálogo.
+            </p>
+
+            <a href="/login.html" class="btn-primary">Entrar</a>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+
+        <a href="/" class="logo" aria-label="DANVERNA - Página inicial">
+            <img
+                src="/images/logo-danverna.png"
+                alt="DANVERNA"
+                style="width: 130px; height: 55px; object-fit: contain;"
+            >
+        </a>
+
+        <p>
+            Danverna — um espaço para quem gosta de jogar e compartilhar histórias.
+        </p>
+
+        <span>© 2026 Danverna</span>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/jogos.js"></script>
+
+</body>
+</html>

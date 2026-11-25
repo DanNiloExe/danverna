@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar evento | A Taverna</title>
+
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/auth.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="auth-container">
+        <section class="auth-card">
+
+            <h1>Criar uma aventura</h1>
+            <p>Prepare um novo encontro para os aventureiros.</p>
+
+            <p id="login-notice" hidden>
+                Você precisa estar logado para criar um evento.
+                <a href="/login.html">Entrar na conta</a>
+            </p>
+
+            <form id="event-form">
+
+                <div class="form-group">
+                    <label for="titulo">Título do evento</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        maxlength="60"
+                        required
+                        placeholder="Ex.: Noite de jogos na taverna"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea
+                        id="descricao"
+                        maxlength="100"
+                        placeholder="Conte um pouco sobre o encontro..."
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data</label>
+                    <input type="date" id="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="horario">Horário</label>
+                    <input type="time" id="horario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="local">Local</label>
+                    <input
+                        type="text"
+                        id="local"
+                        maxlength="60"
+                        placeholder="Onde será o encontro?"
+                    >
+                </div>
+
+                <div class="games-section">
+                    <h2>Jogos da aventura</h2>
+                    <p>Selecione os jogos que estarão disponíveis no encontro.</p>
+
+                    <div id="games-container">
+                        <p>Carregando catálogo...</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary" id="create-event-button">
+                    Criar evento
+                </button>
+
+                <p id="event-message" aria-live="polite"></p>
+
+            </form>
+
+            <a href="/" class="auth-link">Voltar para a página inicial</a>
+
+        </section>
+    </main>
+
+    <script type="module" src="/src/evento.js"></script>
+</body>
+</html>
